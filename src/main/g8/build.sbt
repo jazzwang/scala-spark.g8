@@ -1,5 +1,3 @@
-import Dependencies._
-
 ThisBuild / scalaVersion     := "2.11.11"
 ThisBuild / version          := "0.1.0"
 ThisBuild / organization     := "com.example"
