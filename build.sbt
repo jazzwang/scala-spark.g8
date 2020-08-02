@@ -11,3 +11,10 @@ lazy val root = (project in file("."))
     scriptedLaunchOpts ++= List("-Xms1024m", "-Xmx1024m", "-XX:ReservedCodeCacheSize=128m", "-Xss2m", "-Dfile.encoding=UTF-8"),
     resolvers += Resolver.url("typesafe", url("https://repo.typesafe.com/typesafe/ivy-releases/"))(Resolver.ivyStylePatterns)
   )
+
+// https://stackoverflow.com/questions/24996437/how-to-execute-a-bash-script-as-sbt-task/25005
+import scala.sys.process._
+lazy val distclean = taskKey[Unit]("Clean up temporary files and directories")
+distclean := {
+  "rm -rf project/target project/project target output" !
+}
