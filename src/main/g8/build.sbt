@@ -1,4 +1,4 @@
-ThisBuild / scalaVersion     := "2.12.12"
+ThisBuild / scalaVersion     := "2.12.10"
 ThisBuild / version          := "0.1.0"
 ThisBuild / organization     := "com.example"
 ThisBuild / organizationName := "example"
@@ -7,9 +7,10 @@ lazy val root = (project in file("."))
   .settings(
     name := "Spark in Scala Seed Project",
     libraryDependencies ++= Seq(
-      "org.apache.spark"  %%  "spark-core"    % "2.2.1",
-      "org.apache.spark"  %%  "spark-sql"     % "2.2.1",
-      "org.scalatest"     %%  "scalatest"     % "3.1.1"
+      "org.apache.spark"  %%  "spark-core"      % "3.0.0",
+      "org.apache.spark"  %%  "spark-sql"       % "3.0.0",
+      "org.apache.spark"  %%  "spark-streaming" % "3.0.0",
+      "org.scalatest"     %%  "scalatest"       % "3.1.1"
     )
   )
 
